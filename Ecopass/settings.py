@@ -60,6 +60,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'Ecopass.urls'
 
+#ola mundo
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
