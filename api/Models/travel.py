@@ -26,5 +26,4 @@ class Travel (models.Model):
     def str(self):
         return f"{self.destiny}"
     
-BrB
 
