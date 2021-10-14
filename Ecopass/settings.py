@@ -45,7 +45,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'api'
+    'api',
+    'multiselectfield',
 ,]
 
 MIDDLEWARE = [
@@ -144,3 +145,6 @@ STATICFILES_DIRS = (
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 django_heroku.settings(locals())
+
+MEDIA_ROOT = os.path.join(BASE_DIR, "media") 
+MEDIA_URL = "/media/"
