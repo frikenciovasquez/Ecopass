@@ -17,13 +17,11 @@ class Destiny (models.Model):
         ("Pacifico","pacifico"),
         ("Orinoquia","orinoquia")
     ]
-    nombre= models.CharField("Nombre del destin",max_length=30,required=True)
+    nombre= models.CharField("Nombre del destino",max_length=30)
     vacations_type=models.CharField("tipo de destino",choices=tipo_turismo,null=False,max_length=32)
-    department= models.CharField(
-       'nombre del departamento',max_length=30,required=True)
-    image=models.ImageField(blank=False,upload_to="destiny")
-    #tag = preguntar a lizardo
-    location=models.CharField("locacion del destino",max_length=30,required=True)
+    
+    image=models.ImageField(blank=True,upload_to="destiny")
+   
     region= models.CharField("locacion",choices=regiones,null=False,max_length=30)
     price=models.IntegerField("precio",null=False,blank=False)
     
@@ -33,8 +31,9 @@ class Destiny (models.Model):
     
 
     
-    class Meta():   
-        pass
+    class Meta():  
+        verbose_name='Destino'
+        verbose_name_plural='Destinos'
     
     def str(self):
         return f"{self.nombre}-{self.location}"

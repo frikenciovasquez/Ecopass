@@ -1,5 +1,6 @@
 from django.db import models
 from .users import User
+from datetime import date
 
 class Travel (models.Model):
 
@@ -15,10 +16,8 @@ class Travel (models.Model):
     transporte= models.CharField(
         "medio de transporte",choices=transporte, null=False, max_length=32)
     
-    user=models.ForeignKey("user",related_name="usuario",on_delete=models.CASCADE)
+    user=models.ForeignKey("user",related_name="viajes_usuario",on_delete=models.CASCADE)
     
-    cotizacion= models.IntegerField("valor del viaje", max_length=10,required=True)
-
     
     class Meta:
         verbose_name='Viaje'

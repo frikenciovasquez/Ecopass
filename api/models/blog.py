@@ -17,13 +17,13 @@ class Blog (models.Model):
     
 
 
-    title= models.CharField("Titulo",max_length=30,required=True)
+    title= models.CharField("Titulo",max_length=30)
     body= models.TextField("cuerpo del blog")
-    image=models.ImageField("imagen opcional",blank=False,Upload_to="Blog")
-    tag= MultiSelectField(choices=tag,max_choices=length(tag),max_length=3)
-    region= models.CharField("region",max_length=30,requied=True)
+    image=models.ImageField("imagen opcional",blank=False,upload_to="Blog")
+    tag= MultiSelectField(choices=tag,max_choices=len(tag),blank=True,null=False)
+    region= models.CharField("region",max_length=30)
 
-    usuario= models.ForeignKey("User",related_name="usuario",on_delete=models.CASCADE)
+    usuario= models.ForeignKey("User",related_name="blog_usuario",on_delete=models.CASCADE)
 
         
     class Meta:

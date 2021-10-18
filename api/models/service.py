@@ -13,7 +13,7 @@ class Service (models.Model):
     service= models.CharField(
         "tipo de servicio",choices=servicios,null=False,max_length=30)
     
-    viaje= models.ForeignKey("Travel",related_name="viaje",on_delete=models.CASCADE)
+    viaje= models.ForeignKey("Travel",related_name="servicios_de_viaje",on_delete=models.CASCADE)
 
     alquiler=models.ForeignKey("Rental",related_name="alquiler",on_delete=models.CASCADE)
 
