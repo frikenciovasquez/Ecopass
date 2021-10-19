@@ -1,5 +1,4 @@
 from django.db import models
-from .ruta_turistica import Rute
 
 class Destiny (models.Model):
 
@@ -27,7 +26,7 @@ class Destiny (models.Model):
     
 
 
-    rute= models.ForeignKey("Rute",related_name="ruta",on_delete=models.CASCADE)
+     
     
 
     
