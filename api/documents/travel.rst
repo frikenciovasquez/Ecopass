@@ -43,14 +43,14 @@ Recurso POST
             HTTP/1.1 201 CREATED
             Content-Type: json
 
-                {
-                "id": 11,
-                "date_start": "2021-10-19",
-                "date_end": "2021-10-19",
-                "transporte": "avion",
-                "user": 12,
-                "ruta_de_viaje": []
-                }
+            {
+            "id": 19,
+            "date_start": "2021-10-28",
+            "date_end": "2021-10-29",
+            "transporte": "bus",
+            "user": 14,
+            "ruta_de_viaje": []
+            }
 
             HTTP/1.1 400 BAD_REQUEST
             Content-Type: json
@@ -63,6 +63,16 @@ Recurso POST
                     "Invalid pk \"123\" - object does not exist."
                 ]
                 }
+
+
+                [
+                "Falta fechas"
+                ]
+
+                [
+                "fechas invalidas, fecha de reservacion 8 dias previos, fecha minima de duracion de viaje 1 dia"
+                ]
+                
 Recurso GET
 --------------
 

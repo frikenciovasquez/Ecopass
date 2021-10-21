@@ -12,7 +12,7 @@ Recurso POST
     * **Campos obligatorios**
 
         :rute_name: **(string)** Nombre de la ruta turistica
-        :viaje: **(int)**id de viaje
+        :viaje: **(int)** id de viaje
         :ruta_destinos: **(int)** id del destino **se puede pasar multiples veces**
 
 

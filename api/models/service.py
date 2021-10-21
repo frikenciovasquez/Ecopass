@@ -15,7 +15,7 @@ class Service (models.Model):
     
     viaje= models.ForeignKey("Travel",related_name="servicios_de_viaje",on_delete=models.CASCADE)
 
-    alquiler=models.ForeignKey("Rental",related_name="alquiler",on_delete=models.CASCADE)
+    servicios_disponibles=models.ManyToManyField("Rental")
 
 
 
