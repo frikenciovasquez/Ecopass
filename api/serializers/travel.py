@@ -1,4 +1,4 @@
-from ..models import Rute, Travel, Destiny
+from ..models import Rute, Travel, Destiny,Service,Rental
 from rest_framework import serializers
 
 from datetime import date, timedelta
@@ -29,12 +29,43 @@ class RuteSerializer(serializers.ModelSerializer):
         fields = ('id', 'rute_name', 'viaje','ruta_destinos')
 
 
+class RentalSerializer(serializers.ModelSerializer):
+    
+    class Meta:
+        model= Rental
+        fields= ('id','region','description','phone','price')
+
+class ServiceCreateSerializer(serializers.ModelSerializer):
+    class Meta:
+        model=Service
+        fields=('service', 'viaje','servicios_disponibles')
+
+    def create(self, validated_data):
+        servicios = validated_data.pop("servicios_disponibles")
+        instance = super().create({**validated_data})
+        instance.servicios_disponibles.set(servicios)
+    
+        return instance 
+        
+
+
+class serviceSerializer(serializers.ModelSerializer):
+    servicios_disponibles= RentalSerializer(many=True)
+    class Meta:
+        model = Service
+        fields = ('id', 'service', 'viaje','servicios_disponibles')
+
+
+
+
+
 
 class TravelSerializer(serializers.ModelSerializer):
     ruta_de_viaje=RuteSerializer(many=True, read_only=True)
+    servicios_de_viaje=serviceSerializer(many=True,read_only=True)
     class Meta:
         model = Travel
-        fields = ('id', 'date_start', 'date_end', 'transporte','user','ruta_de_viaje')
+        fields = ('id', 'date_start', 'date_end', 'transporte','user','ruta_de_viaje','servicios_de_viaje')
     def validate_travel(self, value):
         if value.user != self.context['request'].user:
             raise serializers.ValidationError('usuario de viaje incorrecto')
