@@ -9,9 +9,9 @@ django-heroku==0.3.1
 django-multiselectfield==0.1.12
 djangorestframework==3.12.4
 gunicorn==20.1.0
-ipdb==0.13.9
-ipython==7.16.1
-ipython-genutils==0.2.0
+ipdb
+ipython
+ipython-genutils
 jedi==0.18.0
 parso==0.8.2
 pexpect==4.8.0
