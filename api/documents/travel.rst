@@ -38,7 +38,7 @@ Recurso POST
 
     * **Ejemplos de respuesta** 
 
-        .. host:: http
+        .. host:: http/api/travel/
 
             HTTP/1.1 201 CREATED
             Content-Type: json
@@ -79,7 +79,7 @@ Recurso GET
 
     * **Ejemplos de respuesta** 
 
-        .. host:: http
+        .. host:: http/api/travel/
 
             HTTP/1.1 201 CREATED
             Content-Type: json

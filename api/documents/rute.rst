@@ -20,7 +20,7 @@ Recurso POST
 
         .. host:: http
 
-            POST /api/users/login/
+            POST /api/users/ruta/
             Content-Type: json
 
             {
@@ -32,7 +32,7 @@ Recurso POST
 
     * **Ejemplos de respuesta** 
 
-        .. host:: http
+        .. host:: http/api/ruta/
 
             HTTP/1.1 201 CREATED
             Content-Type: json
@@ -64,7 +64,7 @@ Recurso GET
     
     * **Ejemplos de respuesta** 
 
-        .. host:: http
+        .. host:: http/api/ruta/
 
             HTTP/1.1 201 CREATED
             Content-Type: json

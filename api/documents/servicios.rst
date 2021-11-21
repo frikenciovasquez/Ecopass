@@ -5,7 +5,7 @@
 Recurso POST
 -------------
 
-    .. http:post:: /api/ruta/
+    .. http:post:: /api/servicio/
 
     Crea una ruta de viaje con los destinos que prefiera el usuario
 
@@ -20,7 +20,7 @@ Recurso POST
 
         .. host:: http
 
-            POST /api/users/login/
+            POST /api/servicio/
             Content-Type: json
 
             {
@@ -32,7 +32,7 @@ Recurso POST
 
     * **Ejemplos de respuesta** 
 
-        .. host:: http
+        .. host:: http/api/servicio/
 
             HTTP/1.1 201 CREATED
             Content-Type: json
@@ -67,7 +67,7 @@ Recurso GET
     
     * **Ejemplos de respuesta** 
 
-        .. host:: http
+        .. host:: http/api/servicio/
 
             HTTP/1.1 201 CREATED
             Content-Type: json
