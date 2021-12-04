@@ -16,7 +16,7 @@ class Destiny (models.Model):
         ("Pacifico","pacifico"),
         ("Orinoquia","orinoquia")
     ]
-    nombre= models.CharField("Nombre del destino",max_length=30)
+    nombre= models.CharField("Nombre del destino",max_length=80)
     vacations_type=models.CharField("tipo de destino",choices=tipo_turismo,null=False,max_length=32)
     
     image=models.ImageField(blank=True,upload_to="destiny")

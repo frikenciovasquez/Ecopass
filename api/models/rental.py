@@ -3,7 +3,7 @@ from .travel import Travel
 
 class Rental (models.Model):
 
-    region= models.CharField("region",max_length=30)
+    region= models.CharField("region",max_length=80)
     price= models.IntegerField("precio",null=False, blank=False)
     description= models.CharField("descripcion",max_length=250)
     phone= models.CharField("telefono",max_length=10)
