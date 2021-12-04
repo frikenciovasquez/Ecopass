@@ -7,6 +7,7 @@ class Destiny (models.Model):
         ("medicinal" ,"medicinal"),
         ("aves y fauna", "avistamiento"),
         ("empresarial","laboral"),
+        ("Diversion","Ocio,Diversion")
     ]
 
     regiones = [
